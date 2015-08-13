@@ -6,5 +6,5 @@ RUN apt-get update && apt-get install -y \
    git \
    libncurses-dev
 RUN git clone https://github.com/devosoft/avida.git
-RUN cd avida; ./build_avida
-CMD ["bash"]
+RUN ["/bin/bash", "-c",  "cd avida; ./build_avida"]
+CMD ["/bin/bash"]
